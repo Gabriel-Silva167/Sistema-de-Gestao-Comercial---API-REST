@@ -1,0 +1,138 @@
+        :root {
+            --bg-dark: #0d1117;
+            --bg-darker: #161b22;
+            --bg-card: #21262d;
+            --text-light: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --primary: #58a6ff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-dark) !important;
+            color: var(--text-light);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 260px;
+            background-color: var(--bg-darker);
+            border-right: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .sidebar .nav-link {
+            color: var(--text-muted);
+            padding: 12px 20px;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+
+        .sidebar .nav-link:hover {
+            background-color: var(--bg-card);
+            color: var(--text-light);
+        }
+
+        .sidebar .nav-link.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            min-height: 100vh;
+        }
+
+        .bg-darker {
+            background-color: var(--bg-darker) !important;
+        }
+
+        .stat-card {
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .bg-gradient-success {
+            background: linear-gradient(135deg, #3fb950 0%, #2ea043 100%);
+        }
+
+        .bg-gradient-info {
+            background: linear-gradient(135deg, #79c0ff 0%, #58a6ff 100%);
+        }
+
+        .bg-gradient-warning {
+            background: linear-gradient(135deg, #f0883e 0%, #d29922 100%);
+        }
+
+        .table-dark {
+            background-color: var(--bg-darker);
+            color: var(--text-light);
+        }
+
+        .table-dark thead {
+            background-color: var(--bg-card);
+        }
+
+        .table-dark tbody tr:hover {
+            background-color: var(--bg-card);
+        }
+
+        .modal-content {
+            background-color: var(--bg-darker);
+            border-color: var(--border-color);
+        }
+
+        .modal .form-control,
+        .modal .form-select {
+            background-color: var(--bg-card);
+            border-color: var(--border-color);
+            color: var(--text-light);
+        }
+
+        .modal .form-control:focus,
+        .modal .form-select:focus {
+            background-color: var(--bg-card);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(88, 166, 255, 0.25);
+        }
+
+        .modal-header,
+        .modal-footer {
+            border-color: var(--border-color);
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                margin-left: -260px;
+            }
+
+            .sidebar.active {
+                margin-left: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
