@@ -38,7 +38,7 @@ document.getElementById('sidebarToggle').addEventListener('click', () => {
 // Logout
 function logout() {
     localStorage.clear();
-    window.location.href = 'login-complete.html';
+    window.location.href = '../Login/login.html';
 }
 
 // ===== DASHBOARD =====
